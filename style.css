@@ -1,6 +1,4 @@
-/* =====================
-   RESET & BASE
-   ===================== */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -17,17 +15,12 @@ body {
   padding: 2rem 1rem;
 }
 
-/* =====================
-   PAGE WRAPPER
-   ===================== */
+
 .page-wrapper {
   width: 100%;
   max-width: 720px;
 }
 
-/* =====================
-   CARD
-   ===================== */
 .profile-card {
   display: flex;
   flex-direction: row;
@@ -39,9 +32,6 @@ body {
   border: 1px solid #3a3a3a;
 }
 
-/* =====================
-   LEFT COLUMN
-   ===================== */
 .left-col {
   display: flex;
   flex-direction: column;
@@ -96,9 +86,6 @@ nav ul li a:focus {
   outline-offset: 2px;
 }
 
-/* =====================
-   RIGHT COLUMN
-   ===================== */
 .right-col {
   display: flex;
   flex-direction: column;
@@ -154,9 +141,6 @@ time[data-testid="test-user-time"] {
   letter-spacing: 0.03em;
 }
 
-/* =====================
-   INTERESTS
-   ===================== */
 .interests {
   display: flex;
   flex-direction: row;
@@ -215,7 +199,7 @@ time[data-testid="test-user-time"] {
   background: #555;
 }
 
-/* Vertical divider between hobbies and dislikes */
+
 .divider {
   width: 1px;
   background: #3d3d3d;
@@ -223,9 +207,7 @@ time[data-testid="test-user-time"] {
   flex-shrink: 0;
 }
 
-/* =====================
-   RESPONSIVE
-   ===================== */
+
 @media (max-width: 520px) {
   .profile-card {
     flex-direction: column;
