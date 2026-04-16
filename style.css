@@ -1,0 +1,261 @@
+/* =====================
+   RESET & BASE
+   ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  padding: 2rem 1rem;
+}
+
+/* =====================
+   PAGE WRAPPER
+   ===================== */
+.page-wrapper {
+  width: 100%;
+  max-width: 720px;
+}
+
+/* =====================
+   CARD
+   ===================== */
+.profile-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #2b2b2b;
+  border-radius: 16px;
+  padding: 32px;
+  gap: 32px;
+  color: #f0f0f0;
+  border: 1px solid #3a3a3a;
+}
+
+/* =====================
+   LEFT COLUMN
+   ===================== */
+.left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+/* Avatar */
+.avatar-wrap {
+  display: block;
+}
+
+.avatar-wrap img[data-testid="test-user-avatar"] {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  border: 2px solid #444;
+}
+
+/* Social nav */
+nav ul[data-testid="test-user-social-links"] {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #333;
+  border: 1px solid #4a4a4a;
+  color: #aaa;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background: #444;
+  color: #ffffff;
+  border-color: #888;
+  outline: 2px solid #aaa;
+  outline-offset: 2px;
+}
+
+/* =====================
+   RIGHT COLUMN
+   ===================== */
+.right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Header area */
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-header h2[data-testid="test-user-name"] {
+  font-family: 'Michroma', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+}
+
+.role-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #888;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 7px;
+  padding: 3px 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+p[data-testid="test-user-bio"] {
+  font-size: 13px;
+  color: #999;
+  line-height: 1.7;
+}
+
+p[data-testid="test-user-bio"] strong {
+  color: #ccc;
+  font-weight: 500;
+}
+
+time[data-testid="test-user-time"] {
+  font-size: 11px;
+  color: #555;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.03em;
+}
+
+/* =====================
+   INTERESTS
+   ===================== */
+.interests {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #383838;
+  padding-top: 20px;
+  gap: 0;
+}
+
+.interest-section {
+  flex: 1;
+  padding: 0 18px;
+}
+
+.interest-section:first-child {
+  padding-left: 0;
+}
+
+.interest-section:last-child {
+  padding-right: 0;
+}
+
+.interest-section h3 {
+  font-size: 10px;
+  font-weight: 500;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  font-family: 'Michroma', sans-serif;
+}
+
+.interest-section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.interest-section ul li {
+  font-size: 12px;
+  color: #bbb;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.interest-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #555;
+}
+
+/* Vertical divider between hobbies and dislikes */
+.divider {
+  width: 1px;
+  background: #3d3d3d;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 520px) {
+  .profile-card {
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 24px;
+  }
+
+  .left-col {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  nav ul[data-testid="test-user-social-links"] {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .interests {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    align-self: auto;
+  }
+
+  .interest-section {
+    padding: 0;
+  }
+}
