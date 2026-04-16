@@ -9,7 +9,7 @@ A semantic, accessible, and responsive profile card built with HTML, CSS, and va
 ```
 ├── index.html
 ├── style.css
-├── app.js
+├── scripts.js
 └── README.md
 ```
 
