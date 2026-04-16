@@ -2,9 +2,7 @@
 
 A semantic, accessible, and responsive profile card built with HTML, CSS, and vanilla JavaScript.
 
-## Live Demo
 
-> Add your deployed URL here (Netlify / Vercel / GitHub Pages)
 
 ## Project Structure
 
